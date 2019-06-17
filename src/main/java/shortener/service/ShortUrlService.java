@@ -58,7 +58,7 @@ public class ShortUrlService {
      *
      * @param shortUrl short URL
      * @return real URL
-     * @throws EntityNotFoundException if {@link ShortUrl} wan not found
+     * @throws EntityNotFoundException if {@link ShortUrl} was not found
      */
     public String getOriginUrl(String shortUrl) throws EntityNotFoundException {
         Optional<ShortUrl> optional = shortUrlRepository.findByShortUrl(shortUrl);
