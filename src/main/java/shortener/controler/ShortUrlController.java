@@ -37,7 +37,7 @@ public class ShortUrlController {
      * @param urlDto data with short and real URL
      * @return empty response
      */
-    @PostMapping("/saveShortUrl")
+    @PostMapping("/shortUrl")
     public ResponseEntity saveShortUrl(@RequestBody ShortUrlDto urlDto) {
         urlService.save(urlDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -49,7 +49,7 @@ public class ShortUrlController {
      * @param urlDto updated data
      * @return empty response
      */
-    @PutMapping("/updateShortUrl/{id}")
+    @PutMapping("/shortUrl/{id}")
     public ResponseEntity updateShortUrl(@PathVariable int id, @RequestBody ShortUrlDto urlDto)
             throws EntityNotFoundException {
         urlService.update(id, urlDto);
